@@ -14,7 +14,7 @@ export const Learn = () => {
                     width={16}
                     height={16}
                   />
-                  学ぶ
+                  学習
         </a>
     )
 }
@@ -34,7 +34,7 @@ export const Sample = () => {
             width={16}
             height={16}
             />
-            サンプル
+            使用例
         </a>
     );  
 }
@@ -54,7 +54,7 @@ export const GotoNext = () => {
             width={16}
             height={16}
           />
-          nextjs.orgへ移動 →
+          「nextjs.org」へ移動 →
         </a>
     )
 }
