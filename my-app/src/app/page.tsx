@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Learn } from "./Components/otobeTest";
-import { Sample } from "./Components/sample";
+import { Learn, Sample, GotoNext } from "./Components/otobeTest";
+
 
 export default function Home() {
   return (
@@ -57,21 +57,7 @@ export default function Home() {
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <Learn />
         <Sample />
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <GotoNext />
       </footer>
     </div>
   );

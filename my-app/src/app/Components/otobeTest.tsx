@@ -1,5 +1,5 @@
 import Image from "next/image";
-export function Learn() {
+export const Learn = () => { 
     return (
         <a
                   className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -15,6 +15,46 @@ export function Learn() {
                     height={16}
                   />
                   学ぶ
+        </a>
+    )
+}
+
+export const Sample = () => {
+    return (
+         <a
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <Image
+            aria-hidden
+            src="/window.svg"
+            alt="Window icon"
+            width={16}
+            height={16}
+            />
+            サンプル
+        </a>
+    );  
+}
+
+export const GotoNext = () => {
+    return (
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/globe.svg"
+            alt="Globe icon"
+            width={16}
+            height={16}
+          />
+          nextjs.orgへ移動 →
         </a>
     )
 }
