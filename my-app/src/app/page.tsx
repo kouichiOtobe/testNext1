@@ -57,7 +57,7 @@ export default function Home() {
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <Learn />
         <Sample />
-        <GotoNext />
+        <GotoNext title="Topページへ"/>
       </footer>
     </div>
   );

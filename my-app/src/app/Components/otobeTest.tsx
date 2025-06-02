@@ -39,7 +39,7 @@ export const Sample = () => {
     );  
 }
 
-export const GotoNext = () => {
+export const GotoNext = (props) => {
     return (
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -54,7 +54,7 @@ export const GotoNext = () => {
             width={16}
             height={16}
           />
-          「nextjs.org」へ移動 →
+          「{props.title}」へ移動 →
         </a>
     )
 }
