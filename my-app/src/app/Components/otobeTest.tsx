@@ -1,4 +1,21 @@
 import Image from "next/image";
+
+export const Header = ( props ) => {
+  return (
+    <div>
+      <h1>{props.title}</h1>
+      <Image
+        className="dark:invert"
+        src="/next.svg"
+        alt="Next.js logo"
+        width={180}
+        height={38}
+        priority
+      />
+   </div>
+  )
+};
+
 export const Learn = () => { 
     return (
         <a

@@ -1,10 +1,10 @@
-import { Learn, GotoNext } from "../Components/otobeTest"
+import { Header, Learn, GotoNext } from "../Components/otobeTest"
 
 // app/about/page.tsx
-const AboutPage = () => {
+const AboutPage = ( ) => {
   return (
     <div>
-      <h1>このサイトについて</h1>
+      <Header title="このサイトについて"/>
       <p>このページは About ページです。</p>
       <Learn />
         <GotoNext title="ヘルプ・ページへ" />
