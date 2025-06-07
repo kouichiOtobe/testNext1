@@ -7,6 +7,7 @@ export const Sidebar = () => {
   return (
     <div className="Sidebar">
         <SidebarIcon />
+        
         <ul className='SidebarList'>
            {SideBarData.map((value,key) => {
                 return(

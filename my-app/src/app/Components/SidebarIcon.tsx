@@ -1,3 +1,4 @@
+"use client" // App Router では必須（クライアントコンポーネント）
 import React from 'react';
 import Image from 'next/image';
 import Icon from "../Images/AGAVE_Icon.png";
