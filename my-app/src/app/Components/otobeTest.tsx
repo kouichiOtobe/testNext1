@@ -5,8 +5,7 @@ type Props = {
 };
 
 export const Header = ( {title}:Props ) => {
-  console.log("title",{title})
- 
+  
   return (
     <div>
       <h1>{title}</h1>
@@ -62,7 +61,7 @@ export const Sample = () => {
     );  
 }
 
-export const GotoNext = (props) => {
+export const GotoNext = ({title}:Props) => {
     return (
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -77,7 +76,7 @@ export const GotoNext = (props) => {
             width={16}
             height={16}
           />
-          「{props.title}」へ移動 →
+          「{title}」へ移動 →
         </a>
     )
 }
