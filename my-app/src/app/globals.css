@@ -55,7 +55,8 @@ body {
 
 .SidebarList .row:hover {
   cursor: pointer;
-  background-color: lightgreen;
+  background-color: whitesmoke;
+  color: black;
 }
 
 .SidebarList #active {
