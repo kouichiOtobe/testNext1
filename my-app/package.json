@@ -10,6 +10,10 @@
   },
   "dependencies": {
     "@aws-amplify/backend": "^1.16.1",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^7.1.1",
+    "@mui/material": "^7.1.1",
     "aws-amplify": "^6.15.0",
     "next": "15.3.3",
     "react": "^19.0.0",
