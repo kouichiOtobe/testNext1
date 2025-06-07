@@ -1,9 +1,15 @@
 import Image from "next/image";
 
-export const Header = ( props ) => {
+type Props = {
+  title: string;
+};
+
+export const Header = ( {title}:Props ) => {
+  console.log("title",{title})
+ 
   return (
     <div>
-      <h1>{props.title}</h1>
+      <h1>{title}</h1>
       <Image
         className="dark:invert"
         src="/next.svg"
