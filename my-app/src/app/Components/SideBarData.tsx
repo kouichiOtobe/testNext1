@@ -18,6 +18,11 @@ export const SideBarData =[
         link: "/mail"
     },
     {
+        title: "サイドバーデモ",
+        icon: <EmailOutlinedIcon />,
+        link: "/testSidebar"
+    },
+    {
         title: "About",
         icon: <InfoOutlinedIcon />,
         link: "/about"

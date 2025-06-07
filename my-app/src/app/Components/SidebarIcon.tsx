@@ -5,7 +5,9 @@ import Icon from "../Images/AGAVE_Icon.png";
 export const SidebarIcon = () => {
   return (
     <div className="SidebarIcon">
-        <Image src={Icon} alt="SidebarIcon" width={50}/>
+        <div  className="flex justify-center items-center">
+            <Image src={Icon} alt="SidebarIcon"/>
+        </div>
         <p>otobe@s-gardening.jp</p>
     </div>
   )

@@ -10,7 +10,7 @@ export const Header = ( {title}:Props ) => {
     <div>
       <h1>{title}</h1>
       <Image
-        className="dark:invert"
+        //className="dark:invert"
         src="/next.svg"
         alt="Next.js logo"
         width={180}
