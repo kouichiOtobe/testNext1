@@ -1,6 +1,6 @@
+'use client'; // App Router を使っている場合は必要（クライアントコンポーネント）
 import React from 'react'
 import { SideBarData } from './SideBarData'
-
 
 export const Sidebar = () => {
   return (
@@ -8,8 +8,10 @@ export const Sidebar = () => {
         <ul className='SidebarList'>
            {SideBarData.map((value,key) => {
                 return(
-                    <li>
-                        <div id="icon">
+                    <li key={key} className='row' onClick={() => {
+                        window.location.pathname = value.link
+                    }}>
+                        <div id="`icon${key}`">
                             {value.icon} 
                             {value.title}
                         </div>
