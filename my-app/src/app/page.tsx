@@ -10,7 +10,8 @@ const Home = () => {
       </aside>
 
       <main className="flex-1 bg-white p-4">
-        <p>ホーム ページです。</p>
+        <p>☰ ホーム ページです。</p>
+        <p>Tailwindテスト</p>
         <Learn />
         <GotoNext title="ヘルプ・ページへ" />
         <p>Next.jsの学習用に作成されたアプリケーションです。</p>
