@@ -12,9 +12,10 @@ export const Sidebar = () => {
            {SideBarData.map((value,key) => {
                 return(
                     <li key={key} className='row'
-                        id={window.location.pathname == value.link ? "active" : ""}
+                        id={typeof window !== "undefined" && window.location.pathname == value.link ? "active" : ""}
                         onClick={() => {
                         window.location.pathname = value.link
+                        
                     }}>
                         <div id="icon">
                             {value.icon} 
