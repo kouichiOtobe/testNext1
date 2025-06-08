@@ -1,9 +1,15 @@
 'use client'; // App Router を使っている場合は必要（クライアントコンポーネント）
 import React from 'react'
+import { useEffect, useState } from 'react';
 import { SideBarData } from './SideBarData'
 import { SidebarIcon } from './SidebarIcon';
 
 export const Sidebar = () => {
+    const [currentPath, setCurrentPath] = useState('');
+    useEffect(() => {
+        setCurrentPath(window.location.pathname);
+    }, []);
+
   return (
     <div className="Sidebar">
         <SidebarIcon />
@@ -12,9 +18,9 @@ export const Sidebar = () => {
            {SideBarData.map((value,key) => {
                 return(
                     <li key={key} className='row'
-                        id={typeof window !== "undefined" && window.location.pathname == value.link ? "active" : ""}
+                        id={currentPath === value.link ? "active" : ""}
                         onClick={() => {
-                        window.location.pathname = value.link
+                        //currentPath = value.link
                         
                     }}>
                         <div id="icon">
