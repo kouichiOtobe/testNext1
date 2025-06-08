@@ -6,7 +6,7 @@ const testSidebar = () => {
   
         <div className="flex min-h-screen">
             {/* 右側：サイドバー */}
-          <aside className="flex-1 bg-white p-4">
+          <aside className=" bg-white p-4">
             <Sidebar />
           </aside>
           {/* 左側：メインコンテンツ */}
@@ -20,11 +20,3 @@ const testSidebar = () => {
 }
 
 export default testSidebar;
-
-// export default function Home() {
-//   return (
-//     <div className="bg-blue-500 text-white p-4">
-//       Tailwind CSS テスト！
-//     </div>
-//   );
-// }

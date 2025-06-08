@@ -6,10 +6,10 @@ import { SidebarIcon } from './SidebarIcon';
 import Link from 'next/link';
 
 export const Sidebar = () => {
-    const [currentPath, setCurrentPath] = useState('');
-    useEffect(() => {
-        setCurrentPath(window.location.pathname);
-    }, []);
+    // const [currentPath, setCurrentPath] = useState('');
+    // useEffect(() => {
+    //     setCurrentPath(window.location.pathname);
+    // }, []);
 
   return (
     <div className="Sidebar">
