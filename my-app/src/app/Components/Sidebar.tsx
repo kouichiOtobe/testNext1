@@ -18,20 +18,18 @@ export const Sidebar = () => {
     <div className="Sidebar">
         <SidebarIcon />
         
-        <ul className='SidebarList'>
+        <ul className='text-white flex flex-col gap-y-1'>
            {SideBarData.map((item,ix) => {
                 return(
                     <li key={ix} className='row'>
                         <Link href={item.link}
-                            className={clsx('block px-4 py-2 rounded hover:bg-gray-300',
+                            className={clsx('block w-full gap-x-2 px-3 py-3 text-sm hover:bg-blue-300',
                               pathname === item.link && 'bg-blue-500 text-white'
                             )}
                         >
-                            <div id="icon">
-                                {item.icon}
-                            </div>
-                            <div id="title">
-                                {item.title}
+                            <div className="flex items-center gap-y-0">
+                                <div id="icon">{item.icon}</div>
+                                <div id="title" className='leading-tight'>{item.title}</div>
                             </div>
                         </Link>
                     </li>

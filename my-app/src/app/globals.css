@@ -46,15 +46,16 @@ body {
   width: 100%;
 }
 
-.SidebarList .row {
+/* .SidebarList .row {
   width: 100%;
   height: 60px;
-  /* background-color: #5a05d9; */
+  background-color: #5a05d9; 
   display: flex;
   color: white;
   justify-content: center;
   align-items: center;
-}
+} 
+*/
 
 /* .SidebarList .row:hover {
   cursor: pointer;
