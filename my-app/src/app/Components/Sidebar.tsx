@@ -3,6 +3,7 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import { SideBarData } from './SideBarData'
 import { SidebarIcon } from './SidebarIcon';
+import Link from 'next/link';
 
 export const Sidebar = () => {
     const [currentPath, setCurrentPath] = useState('');
@@ -15,20 +16,17 @@ export const Sidebar = () => {
         <SidebarIcon />
         
         <ul className='SidebarList'>
-           {SideBarData.map((value,key) => {
+           {SideBarData.map((item,ix) => {
                 return(
-                    <li key={key} className='row'
-                        id={currentPath === value.link ? "active" : ""}
-                        onClick={() => {
-                        //currentPath = value.link
-                        
-                    }}>
-                        <div id="icon">
-                            {value.icon} 
-                        </div>
-                        <div id="title">
-                            {value.title}
-                        </div>
+                    <li key={ix} className='row'>
+                        <Link href={item.link}>
+                            <div id="icon">
+                                {item.icon}
+                            </div>
+                            <div id="title">
+                                {item.title}
+                            </div>
+                        </Link>
                     </li>
                 )
              }
