@@ -6,7 +6,7 @@ const testSidebar = () => {
   
         <div className="flex min-h-screen">
             {/* 右側：サイドバー */}
-          <aside className=" bg-white p-4">
+          <aside className="bg-white p-4">
             <Sidebar />
           </aside>
           {/* 左側：メインコンテンツ */}

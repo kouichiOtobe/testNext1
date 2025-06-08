@@ -56,15 +56,15 @@ body {
   align-items: center;
 }
 
-.SidebarList .row:hover {
+/* .SidebarList .row:hover {
   cursor: pointer;
   background-color: blue;
   color: red;
-}
+} */
 
-.SidebarList #active {
+/* .SidebarList #active {
   background-color: blue;
-}
+} */
 
 .row #icon {
   flex: 30%;
