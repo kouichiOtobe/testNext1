@@ -24,14 +24,19 @@ export const SideBarMenu:MenuItem[] =[
         path: "/"
     },
     {
-        title: "クイズ",
+        title: "勉強中",
         icon: <SmartToyOutlinedIcon />,
-        path: "/quiz"
-    },
-    {
-        title: "フォームデモ",
-        icon: <EmailOutlinedIcon />,
-        path: "/testSidebar"
+        path: "/testSidebar",
+        children: [ {
+            title: "フォームデモ",
+            icon: <EmailOutlinedIcon />,
+            path: "/testSidebar"
+        },
+        {
+            title: "クイズ",
+            icon: <SmartToyOutlinedIcon />,
+            path: "/quiz"
+        }]
     },
     {
         title: "設定",

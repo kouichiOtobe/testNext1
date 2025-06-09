@@ -42,7 +42,7 @@ function SidebarItem({ item }: { item: MenuItem }) {
 }
 
 export function Sidebar() {
-    console.log(SideBarMenu);
+    //console.log(SideBarMenu);
   return (
     <div className='bg-black text-white'>
         <aside className="w-64 p-4 h-screen overflow-auto">
