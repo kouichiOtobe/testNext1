@@ -16,7 +16,7 @@ export const SideBarData =[
     {
         title: "クイズ",
         icon: <SmartToyOutlinedIcon />,
-        link: "/mail"
+        link: "/quiz"
     },
     {
         title: "フォームデモ",

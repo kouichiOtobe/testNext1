@@ -2,6 +2,7 @@ import { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Sidebar } from "./Components/Sidebar";
+import { Header } from "./Components/Header";
 
 export const metadata: Metadata = {
   title: "乙部作成App",
@@ -14,17 +15,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
-      <body>
-         <div className="flex min-h-screen">
-            <aside className="w-64 bg-white p-4 border-r">
-              <Sidebar />
-            </aside>
-      
-            <main className="flex-1 bg-blue p-4">
-             {children}
-            </main>
-          </div>
+     <html lang="ja">
+      <body className="min-h-screen flex">
+        {/* Sidebar (常時左側) */}
+        <Sidebar />
+
+        {/* Main Area */}
+        <div className="flex flex-col flex-1">
+          {/* Header (Mainエリアの上部にだけ表示) */}
+          <Header />
+
+          {/* Main Content */}
+          <main className="flex-1 p-6 bg-white overflow-y-auto">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );
