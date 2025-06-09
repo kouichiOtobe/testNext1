@@ -1,43 +1,45 @@
 'use client'; // App Router を使っている場合は必要（クライアントコンポーネント）
 import React from 'react'
 // import { useEffect, useState } from 'react';
-import { SideBarMenu } from './SideBarData'
+import { SideBarMenu, MenuItem } from './SideBarData'
 import { SidebarIcon } from './SidebarIcon';
 import Link from 'next/link';
 import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
+import { useState } from "react";
 
-export const Sidebar = () => {
-    const pathname = usePathname();
-    // const [currentPath, setCurrentPath] = useState('');
-    // useEffect(() => {
-    //     setCurrentPath(window.location.pathname);
-    // }, []);
+function SidebarItem({ item }: { item: MenuItem }) {
+  const [open, setOpen] = useState(false);
+  const hasChildren = item.children && item.children.length > 0;
 
   return (
-    <div className="Sidebar">
-        <SidebarIcon />
-        
-        <ul className='w-64 text-white h-screen flex-col gap-y-1'>
-           {SideBarMenu.map((item,ix) => {
-                return(
-                    <li key={ix} className='row'>
-                        <Link href={item.path}
-                            className={clsx('block w-full gap-x-2 px-3 py-3 text-sm hover:bg-blue-300',
-                              pathname === item.path && 'bg-blue-500 text-white'
-                            )}
-                        >
-                            <div className="flex items-center gap-y-0">
-                                <div id="icon">{item.icon}</div>
-                                <div id="title" className='leading-tight'>{item.title}</div>
-                            </div>
-                        </Link>
-                    </li>
-                )
-             }
-        )}
-        </ul>
+    <div className="ml-2">
+      <div
+        className="cursor-pointer py-1 hover:underline"
+        onClick={() => hasChildren && setOpen(!open)}
+      >
+        <div id="icon">{item.icon}</div>
+        {hasChildren ? (open ? "▼ " : "▶ ") : " "}
+        <Link href={item.path}>{item.title}</Link>
+      </div>
+      {open && hasChildren && (
+        <div className="ml-4">
+          {item.children!.map((child) => (
+            <SidebarItem key={child.path} item={child} />
+          ))}
+        </div>
+      )}
     </div>
-  )
+  );
+}
 
+export function Sidebar() {
+    console.log(SideBarMenu);
+  return (
+    <aside className="w-64 bg-gray-100 p-4 h-screen overflow-auto">
+      {SideBarMenu.map((item) => (
+        <SidebarItem key={item.path} item={item} />
+      ))}
+    </aside>
+  );
 }

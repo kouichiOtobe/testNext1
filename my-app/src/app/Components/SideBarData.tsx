@@ -9,50 +9,12 @@ import SettingsSuggestOutlinedIcon from '@mui/icons-material/SettingsSuggestOutl
 import path from 'path';
 import { MenuItem } from '@mui/material';
 
-type MenuItem = {
+export type MenuItem = {
   title: string;
   icon: React.ReactNode;
   path: string;
   children?: MenuItem[];
 };
-
-/**
- * MenuItem 配列を破壊的に変更し、指定された path の要素に children を追加する
- * @param menu - MenuItem 配列（直接変更される）
- * @param targetPath - 追加先の path
- * @param newChildren - 追加する children 配列
- * @returns 成功: true / 失敗: false
- */
-function addChildrenByPathMutate(
-  menu: MenuItem[],
-  targetPath: string,
-  newChildren: MenuItem[]
-): boolean {
-  let found = false;
-
-  const addRecursively = (items: MenuItem[]) => {
-    for (const item of items) {
-      if (item.path === targetPath) {
-        item.children = [...(item.children || []), ...newChildren];
-        found = true;
-        return;
-      }
-      if (item.children) {
-        addRecursively(item.children);
-        if (found) return;
-      }
-    }
-  };
-
-  addRecursively(menu);
-
-  if (!found) {
-    console.error(`指定された path "${targetPath}" は見つかりませんでした。`);
-    return false;
-  }
-
-  return true;
-}
 
 //＊＊＊　メニュー　＊＊＊
 export const SideBarMenu:MenuItem[] =[
@@ -74,18 +36,11 @@ export const SideBarMenu:MenuItem[] =[
     {
         title: "設定",
         icon: <SettingsSuggestOutlinedIcon />,
-        path: "/Setting"
-    },
-    {
-        title: "About",
-        icon: <InfoOutlinedIcon />,
-        path: "/about"
+        path: "/Setting",
+        children: [{
+            title: "補助設定",
+            icon: <SettingsSuggestOutlinedIcon />,
+            path: "/Setting/hojyo"
+        }]
     }
 ]
-
-//＊＊＊サブメニューの追可
-const result = addChildrenByPathMutate(SideBarMenu,
-     "/settings", [{title:"その他", icon: <SettingsSuggestOutlinedIcon />,path:"/setting/etc"}]);
-console.log(result); // true
-
-console.log(SideBarMenu); // menu に直接追加されている
