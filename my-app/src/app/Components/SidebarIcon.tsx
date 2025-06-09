@@ -9,7 +9,7 @@ export const SidebarIcon = () => {
         <div  className="flex justify-center items-center">
             <Image src={Icon} alt="SidebarIcon" priority />
         </div>
-        <p>otobe@s-gardening.jp</p>
+        <p>利用者：乙部</p>
     </div>
   )
 }

@@ -14,8 +14,9 @@ function SidebarItem({ item }: { item: MenuItem }) {
 
   return (
     <div className="ml-2">
+  
       <div
-        className="cursor-pointer py-1 hover:underline"
+        className="flex items-center gap-2 px-4 py-2 hover:bg-blue-600"
         onClick={() => hasChildren && setOpen(!open)}
       >
         <div id="icon">{item.icon}</div>
@@ -36,10 +37,13 @@ function SidebarItem({ item }: { item: MenuItem }) {
 export function Sidebar() {
     console.log(SideBarMenu);
   return (
-    <aside className="w-64 bg-gray-100 p-4 h-screen overflow-auto">
-      {SideBarMenu.map((item) => (
-        <SidebarItem key={item.path} item={item} />
-      ))}
-    </aside>
+    <div className='bg-black text-white'>
+        <aside className="w-64 p-4 h-screen overflow-auto">
+            <SidebarIcon />
+             {SideBarMenu.map((item) => (
+            <SidebarItem key={item.path} item={item} />
+        ))}
+        </aside>
+    </div>
   );
 }

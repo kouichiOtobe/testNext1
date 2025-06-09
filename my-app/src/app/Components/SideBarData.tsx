@@ -42,5 +42,10 @@ export const SideBarMenu:MenuItem[] =[
             icon: <SettingsSuggestOutlinedIcon />,
             path: "/Setting/hojyo"
         }]
+    },
+    {
+        title: "About",
+        icon: <InfoOutlinedIcon />,
+        path: "/about"
     }
 ]
