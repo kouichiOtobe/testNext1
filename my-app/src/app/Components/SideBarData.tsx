@@ -5,6 +5,7 @@ import ThreeDRotation from '@mui/icons-material/ThreeDRotation';
 import HomeIcon from '@mui/icons-material/Home';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
 
 export const SideBarData =[
     {
@@ -13,12 +14,12 @@ export const SideBarData =[
         link: "/"
     },
     {
-        title: "メール",
-        icon: <EmailOutlinedIcon />,
+        title: "クイズ",
+        icon: <SmartToyOutlinedIcon />,
         link: "/mail"
     },
     {
-        title: "サイドバーデモ",
+        title: "フォームデモ",
         icon: <EmailOutlinedIcon />,
         link: "/testSidebar"
     },
