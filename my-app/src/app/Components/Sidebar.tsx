@@ -18,7 +18,7 @@ export const Sidebar = () => {
     <div className="Sidebar">
         <SidebarIcon />
         
-        <ul className='text-white flex flex-col gap-y-1'>
+        <ul className='w-64 text-white h-screen flex-col gap-y-1'>
            {SideBarData.map((item,ix) => {
                 return(
                     <li key={ix} className='row'>
