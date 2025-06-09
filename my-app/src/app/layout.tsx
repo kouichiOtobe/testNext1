@@ -22,7 +22,7 @@ export default function RootLayout({
             </aside>
       
             <main className="flex-1 bg-blue p-4">
-        {children}
+             {children}
             </main>
           </div>
       </body>

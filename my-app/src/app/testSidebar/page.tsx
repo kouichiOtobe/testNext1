@@ -1,7 +1,5 @@
 'use client';
-// app/layout.tsx または app/(main)/layout.tsx など
-
-import { Sidebar } from "../Components/Sidebar";
+//フォームデモ
 import { useReducer } from 'react';
 
 // 状態の型

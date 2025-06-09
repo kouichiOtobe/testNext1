@@ -1,5 +1,3 @@
-import Image from "next/image";
-import { Sidebar } from "./Components/Sidebar";
 import { GotoNext, Learn } from "./Components/otobeTest";
 
 const Home = () => {

@@ -1,5 +1,6 @@
+//About
+
 import { Header, Learn, GotoNext } from "../Components/otobeTest"
-import { Sidebar } from "../Components/Sidebar";
 
 // app/about/page.tsx
 const AboutPage = ( ) => {
